@@ -79,6 +79,11 @@ function render (){
     middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall);
 
+  var products=[];
+  products.push(leftMall);
+  products.push(rightMall);
+  products.push(middleMall);
+  console.log(products);
 
   console.log(leftMall);
   console.log(rightMall);
@@ -96,16 +101,32 @@ function render (){
   middleImage.setAttribute('alt',middleMall.mallNmae);
   middleImage.setAttribute('title',middleMall.mallNmae);
 
-  var previousindex=[names.leftMall,names.rightMall,names.middleImage];
-  do{
-    names.leftMall= getrandomNumber();
+  while(leftMall===products[0] || rightMall===products[1] || middleMall===products[2]){
+    leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
+    rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
+    middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   }
-  while(previousindex)
-  
-  
-  
 
+  //   var previousindex=[names.leftMall,names.rightMall,names.middleImage];
+  //   console.log(previousindex);
+  //   do{
+  //     names.leftMall= randomNumber();
+  //   }
+  //   while(names.leftMall===previousindex);
+
+  //   previousindex.push(names.leftMall);
+  //   do{
+  //     names.rightMall=randomNumber();
+  //   }while (names.rightMall===previousindex);
+  //   previousindex.push(names.rightMall);
+
+//   do{
+//     names.middleMall=randomNumber();
+//   }while(names.middleMall===previousindex);
+//   previousindex.push(names.middleMall);
+// }
 }
+
 
 render();
 
