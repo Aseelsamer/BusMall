@@ -1,17 +1,18 @@
-/* h1 {
+h1 {
     background-color: lightseagreen;
     color: azure;
     display: inline;
 }
-nav ul li {
+nav  li {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: navajowhite;
+    color: black;
   }
   
-  li {
+  /* li {
     float: left;
   }
   
@@ -27,8 +28,9 @@ nav ul li {
     background-color: #111;
   }
 
-  main ul {
-      background-color: lightskyblue;
-      letter-spacing: 100%;
-      float: right;
+  #finalresults ul {
+    text-align: center;
+
   } */
+
+  

@@ -72,34 +72,32 @@ new Mall ('wine-glass', 'assets/wine-glass.jpg');
 
 var leftMall , rightMall , middleMall;
 function render (){
-  if (leftImage.mallNmae && leftImage.src === rightImage.mallNmae && rightImage.src === middleImage.mallNmae && middleImage.src){
-    imageSection.removeEventListener('click',render);
-
-  } else {
-
+  do {
 
     leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
+  }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall);
 
-    console.log(leftMall);
-    console.log(rightMall);
-    console.log(middleMall);
 
-    leftImage.setAttribute('src',leftMall.src);
-    leftImage.setAttribute('alt',leftMall.mallNmae);
-    leftImage.setAttribute('title',leftMall.mallNmae);
+  console.log(leftMall);
+  console.log(rightMall);
+  console.log(middleMall);
 
-    rightImage.setAttribute('src',rightMall.src);
-    rightImage.setAttribute('alt',rightMall.mallNmae);
-    rightImage.setAttribute('title',rightMall.mallNmae);
+  leftImage.setAttribute('src',leftMall.src);
+  leftImage.setAttribute('alt',leftMall.mallNmae);
+  leftImage.setAttribute('title',leftMall.mallNmae);
 
-    middleImage.setAttribute('src',middleMall.src);
-    middleImage.setAttribute('alt',middleMall.mallNmae);
-    middleImage.setAttribute('title',middleMall.mallNmae);
+  rightImage.setAttribute('src',rightMall.src);
+  rightImage.setAttribute('alt',rightMall.mallNmae);
+  rightImage.setAttribute('title',rightMall.mallNmae);
 
-  }
+  middleImage.setAttribute('src',middleMall.src);
+  middleImage.setAttribute('alt',middleMall.mallNmae);
+  middleImage.setAttribute('title',middleMall.mallNmae);
+
 }
+
 render();
 
 var imageSection = document.getElementById('imageSection');
@@ -148,5 +146,3 @@ function renderSummary() {
     liE.textContent = `${Mall.all[i].mallNmae} has ${Mall.all[i].clicks} clicks and ${Mall.all[i].views} views`;
   }
 }
-
-
