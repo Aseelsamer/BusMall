@@ -1,9 +1,9 @@
-h1 {
-    background-color: lightseagreen;
-    color: azure;
+/* h1 {
+    font-size: x-large;
+    color:black;
     display: inline;
 }
-nav  li {
+#home {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -12,11 +12,11 @@ nav  li {
     color: black;
   }
   
-  /* li {
+  li {
     float: left;
   }
   
-  li a {
+ li a {
     display: block;
     color: white;
     text-align: center;
@@ -30,6 +30,7 @@ nav  li {
 
   #finalresults ul {
     text-align: center;
+    background-color: cadetblue;
 
   } */
 
