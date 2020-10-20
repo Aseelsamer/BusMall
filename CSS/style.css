@@ -19,7 +19,7 @@
 
 }
 
-li {
+/* li {
   float: left;
 }
 
@@ -29,15 +29,9 @@ li a {
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
- }
+ } */
  
 
-  #finalresults {
-    background-color: navajowhite;
-    float: right;
-list-style-type: circle;
-
-
-  } 
+  
 
   
