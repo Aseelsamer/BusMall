@@ -1,3 +1,4 @@
+  
 'use strict';
 // var names =[
 //   'bag',
@@ -107,24 +108,7 @@ function render (){
     middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   }
 
-  //   var previousindex=[names.leftMall,names.rightMall,names.middleImage];
-  //   console.log(previousindex);
-  //   do{
-  //     names.leftMall= randomNumber();
-  //   }
-  //   while(names.leftMall===previousindex);
 
-  //   previousindex.push(names.leftMall);
-  //   do{
-  //     names.rightMall=randomNumber();
-  //   }while (names.rightMall===previousindex);
-  //   previousindex.push(names.rightMall);
-
-//   do{
-//     names.middleMall=randomNumber();
-//   }while(names.middleMall===previousindex);
-//   previousindex.push(names.middleMall);
-// }
 }
 
 
@@ -267,4 +251,3 @@ function renderChart(){
     }
   });
 }
-
