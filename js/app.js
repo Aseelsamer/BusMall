@@ -23,8 +23,8 @@
 //   'usb'
 // ];
 
-
-
+var clicksSecound=0;
+var updatedclicks=0;
 var leftImage =document.getElementById('leftImage');
 var rightImage = document.getElementById('rightImage');
 var middleImage = document.getElementById('middleImage');
@@ -168,7 +168,7 @@ function handleClickonMall (event) {
     }
 
   }
-  sendOrderToLS();
+  updatedclicks();
 }
 
 function renderSummary() {
@@ -274,32 +274,25 @@ function renderChart(){
   });
 
 
-
-
-function sendOrderToLS() {
-  var mallOrdersArray = JSON.stringify(Mall.all);
-  localStorage.setItem('MallOrders',mallOrdersArray);
-}
-
-function getOrdersFromLS() {
-  var ordersArray = localStorage.getItem('MallOrders');
-  var data=JSON.parse(ordersArray);
-
-  if(data) {
-    for ( var i=0;i<data.length;i++){
-
-      var object = data[i];
-      var currentMall= Mall.all[i];
-      currentMall.clicks=object.clicks;
-      currentMall.views=object.views;
-    }
-    console.log('object',data[0].clicks);
-    console.log('mall',Mall.all[0].clicks);
-    render();
+  function updatedclicks() {
+    var clicksString = JSON.stringify(totalClick);
+    localStorage.setItem('Clicks',clicksString);
   }
 
-}
-// render();
-// getOrdersFromLS();
+  function clicksSecound() {
+    var clicksString = localStorage.getItem('Clicks');
+    var data=JSON.parse(clicksString);
 
-getOrdersFromLS();
+    if(data) {
+      if (data) {
+        totalClick=data;
+      }
+    }render();
+
+  }console.log(totalClick);
+}
+render();
+// eslint-disable-next-line no-undef
+clicksSecound();
+
+
