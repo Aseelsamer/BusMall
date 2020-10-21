@@ -158,17 +158,18 @@ function handleClickonMall (event) {
       if (event.target.id === 'middleImage'){
         middleMall.clicks++;
       }
-
+      clickStore();
       render();
     }
     if(totalClick === 25) {
       // renderSummary();
       document.getElementById('button').addEventListener('click',renderSummary);
       console.log(totalClick);
+      mallStorage();
     }
 
   }
-  updatedclicks();
+
 }
 
 function renderSummary() {
@@ -182,6 +183,39 @@ function renderSummary() {
     renderChart();
   }
 }
+
+function mallStorage(){
+  var orders=JSON.stringify(Mall.all);
+  localStorage.setItem('Mall' , orders);
+}
+function getMall(){
+  var food=localStorage.getItem('Mall');
+  var food2=JSON.parse(food);
+
+  if (food2){
+    Mall.all=food;
+  }
+}
+getMall();
+
+function clickStore() {
+  var clicksString = JSON.stringify(totalClick);
+  localStorage.setItem('Clicks',clicksString);
+}
+
+
+function numOfclc() {
+  var clicksString = localStorage.getItem('Clicks');
+  var data=JSON.parse(clicksString);
+
+  if (data) {
+    totalClick=data;
+  }
+}
+
+console.log(totalClick);
+
+numOfclc();
 
 
 var view=[];
@@ -271,28 +305,4 @@ function renderChart(){
         }]
       }
     }
-  });
-
-
-  function updatedclicks() {
-    var clicksString = JSON.stringify(totalClick);
-    localStorage.setItem('Clicks',clicksString);
-  }
-
-  function clicksSecound() {
-    var clicksString = localStorage.getItem('Clicks');
-    var data=JSON.parse(clicksString);
-
-    if(data) {
-      if (data) {
-        totalClick=data;
-      }
-    }render();
-
-  }console.log(totalClick);
-}
-render();
-// eslint-disable-next-line no-undef
-clicksSecound();
-
-
+  });}
