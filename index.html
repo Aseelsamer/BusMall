@@ -8,26 +8,31 @@
 </head>
 <body>
     <header>
-
+        
         <h1>Supermarket</h1>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact</li>
+            <ul id="home">
+                <li><a  Home>HOME</a></li>
+                <li><a About Us>ABOUT US</a></li>
+                <li><a Contact>CONTACT</a></li>
             </ul>
         </nav>
         
     </header>
     <main>
-
+        <button id="button" >View results</button> 
+        
         <section id="imageSection" >
             <img id="leftImage" src="" alt="" title="" />
             <img id="rightImage" src="" alt="" title="" />
             <img id="middleImage" src="" alt="" title=""/>
         </section>
-
-        <script src="js/app.js"></script>
+        <ul id="finalresults" ></ul>
+        
+        <canvas id='myChart'></canvas>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+
 </body>
 </html>
