@@ -11,7 +11,6 @@ function Mall(mName, src) {
   this.views=0;
   this.clicks=0;
   Mall.all.push(this);
-
 }
 
 
