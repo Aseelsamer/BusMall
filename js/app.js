@@ -34,13 +34,12 @@ function Mall(mName, src) {
   this.views=0;
   this.clicks=0;
   Mall.all.push(this);
-
 }
 
-var names =[];
-for (var i=0;i<names.length;i++){
-  new Mall(names[i]);
-}
+// var names =[];
+// for (var i=0;i<names.length;i++){
+//   new Mall(names[i]);
+// }
 console.log(Mall.all);
 
 function randomNumber(min, max) {
@@ -68,16 +67,30 @@ new Mall ('usb', 'assets/usb.gif');
 new Mall ('water-can', 'assets/water-can.jpg');
 new Mall ('wine-glass', 'assets/wine-glass.jpg');
 
-
+var rounds=[];
+var ifexisits;
 
 var leftMall , rightMall , middleMall;
 function render (){
   do {
-
+    ifexisits=false; //vairable to store if any of current round picture equal any of previous one
     leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
-  }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall);
+    for (var i=0;i<rounds.length;i++){
+      if (rounds[i]===leftMall || rounds[i]===rightMall || rounds[i]===middleMall){
+        ifexisits=true;
+        break;
+      }else { ifexisits=false;}
+
+    }
+  }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall ||ifexisits===true );
+
+  rounds=[];
+
+  rounds.push(leftMall);
+  rounds.push(rightMall);
+  rounds.push(middleMall);
 
 
   console.log(leftMall);
