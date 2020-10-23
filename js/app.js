@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+'use strict';
+=======
 /* eslint-disable no-unused-vars */
 
 'use strict';
@@ -25,6 +29,7 @@
 
 var clicksSecound=0;
 var updatedclicks=0;
+>>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 var leftImage =document.getElementById('leftImage');
 var rightImage = document.getElementById('rightImage');
 var middleImage = document.getElementById('middleImage');
@@ -36,14 +41,17 @@ function Mall(mName, src) {
   this.views=0;
   this.clicks=0;
   Mall.all.push(this);
-
 }
+<<<<<<< HEAD
+
+=======
 var randomArray=[];
 var names =[];
 for (var i=0;i<names.length;i++){
   new Mall(names[i]);
 }
 console.log(Mall.all);
+>>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -92,26 +100,48 @@ var stuff3;
 function renderImages(){
   var randArray=getrandomImages(0,(Mall.length-1));
 
+<<<<<<< HEAD
+var rounds=[];
+var ifexisits;
+
+=======
   stuff1 = Mall[randArray[0]];
   stuff2 = Mall[randArray[1]];
   stuff3 = Mall[randArray[2]];
   render();
 }
 renderImages();
+>>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 var leftMall , rightMall , middleMall;
 function render (){
   do {
-
+    ifexisits=false; //vairable to store if any of current round picture equal any of previous one
     leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
     middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
-  }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall);
+    for (var i=0;i<rounds.length;i++){
+      if (rounds[i]===leftMall || rounds[i]===rightMall || rounds[i]===middleMall){
+        ifexisits=true;
+        break;
+      }else { ifexisits=false;}
 
+    }
+  }while(leftMall===middleMall || leftMall===rightMall|| middleMall===rightMall ||ifexisits===true );
+
+  rounds=[];
+
+  rounds.push(leftMall);
+  rounds.push(rightMall);
+  rounds.push(middleMall);
+
+<<<<<<< HEAD
+=======
 
   leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
 
+>>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 
   console.log(leftMall);
   console.log(rightMall);

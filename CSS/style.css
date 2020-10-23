@@ -16,7 +16,7 @@
     overflow: hidden;
     background-color: navajowhite;
     color: black;
-
+  
 }
 
 /* li {
@@ -25,9 +25,45 @@
 
 li a {
    display: block;
-   color: white;
+   color:black;
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
+<<<<<<< HEAD
+   font-family: 'Syne Mono', monospace;
+   font-size: xx-large;
+ }
+ 
+/* 
+  #finalresults {
+    background-color: navajowhite;
+    float: right;
+list-style-type: circle;
+
+
+  } 
+
+   */
+
+   body{
+     background-color: cornsilk;
+   }
+
+   h1{
+    font-family: 'Syne Mono', monospace;
+   }
+
+   #button{
+     border-radius: 12px;
+     padding: 14px 40px;
+     background-color: black;
+     color:navajowhite ;
+     font-size: xx-large;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     margin-top: 15px;
+     margin-bottom: 15px;
+   }
+=======
  } */
  
+>>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
