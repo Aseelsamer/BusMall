@@ -1,29 +1,5 @@
 
 'use strict';
-// var names =[
-//   'bag',
-//   'banana',
-//   'bathroom',
-//   'boots',
-//   'breakfast',
-//   'bubblegum',
-//   'chair',
-//   'cthulhu',
-//   'dog-duck',
-//   'dragon',
-//   'pen',
-//   'pet-sweep',
-//   'scissors',
-//   'shark',
-//   'tauntaun',
-//   'unicorn',
-//   'water-can',
-//   'sweep',
-//   'usb'
-// ];
-
-
-
 var leftImage =document.getElementById('leftImage');
 var rightImage = document.getElementById('rightImage');
 var middleImage = document.getElementById('middleImage');
@@ -38,11 +14,6 @@ function Mall(mName, src) {
 
 }
 
-// var names =[];
-// for (var i=0;i<names.length;i++){
-//   new Mall(names[i]);
-// }
-// console.log(Mall.all);
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
