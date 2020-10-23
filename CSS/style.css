@@ -12,25 +12,34 @@ nav  li {
     color: black;
   }
   
-  /* li {
+  
+  body{
+    background-color: cornsilk;
+  }
+
+  h1{
+   font-family: 'Syne Mono', monospace;
+  }
+
+  #button{
+    border-radius: 12px;
+    padding: 14px 40px;
+    background-color: black;
+    color:navajowhite ;
+    font-size: xx-large;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+
+  #leftImage,#rightImage,#middleImage {
     float: left;
+    width: 20%;
+    padding: 15px;
   }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  #imageSection{
+    content: "";
+    clear: both;
+    display: table;
   }
-  
-  li a:hover {
-    background-color: #111;
-  }
-
-  #finalresults ul {
-    text-align: center;
-
-  } */
-
-  
