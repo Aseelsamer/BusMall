@@ -1,35 +1,5 @@
-<<<<<<< HEAD
 
 'use strict';
-=======
-/* eslint-disable no-unused-vars */
-
-'use strict';
-// var names =[
-//   'bag',
-//   'banana',
-//   'bathroom',
-//   'boots',
-//   'breakfast',
-//   'bubblegum',
-//   'chair',
-//   'cthulhu',
-//   'dog-duck',
-//   'dragon',
-//   'pen',
-//   'pet-sweep',
-//   'scissors',
-//   'shark',
-//   'tauntaun',
-//   'unicorn',
-//   'water-can',
-//   'sweep',
-//   'usb'
-// ];
-
-var clicksSecound=0;
-var updatedclicks=0;
->>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 var leftImage =document.getElementById('leftImage');
 var rightImage = document.getElementById('rightImage');
 var middleImage = document.getElementById('middleImage');
@@ -42,16 +12,13 @@ function Mall(mName, src) {
   this.clicks=0;
   Mall.all.push(this);
 }
-<<<<<<< HEAD
 
-=======
 var randomArray=[];
 var names =[];
 for (var i=0;i<names.length;i++){
   new Mall(names[i]);
 }
 console.log(Mall.all);
->>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -100,18 +67,15 @@ var stuff3;
 function renderImages(){
   var randArray=getrandomImages(0,(Mall.length-1));
 
-<<<<<<< HEAD
-var rounds=[];
-var ifexisits;
-
-=======
+  
   stuff1 = Mall[randArray[0]];
   stuff2 = Mall[randArray[1]];
   stuff3 = Mall[randArray[2]];
   render();
 }
+var rounds=[];
+var ifexisits;
 renderImages();
->>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 var leftMall , rightMall , middleMall;
 function render (){
   do {
@@ -134,14 +98,11 @@ function render (){
   rounds.push(rightMall);
   rounds.push(middleMall);
 
-<<<<<<< HEAD
-=======
 
   leftMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   rightMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
   middleMall = Mall.all[randomNumber(0,Mall.all.length - 1)];
 
->>>>>>> 6f2bdc5a24d4d77467e7ff9810a0d1a10d8ce2eb
 
   console.log(leftMall);
   console.log(rightMall);
@@ -301,28 +262,4 @@ function renderChart(){
         }]
       }
     }
-  });
-
-
-  function updatedclicks() {
-    var clicksString = JSON.stringify(totalClick);
-    localStorage.setItem('Clicks',clicksString);
-  }
-
-  function clicksSecound() {
-    var clicksString = localStorage.getItem('Clicks');
-    var data=JSON.parse(clicksString);
-
-    if(data) {
-      if (data) {
-        totalClick=data;
-      }
-    }render();
-
-  }console.log(totalClick);
-}
-render();
-// eslint-disable-next-line no-undef
-clicksSecound();
-
-
+  });}
